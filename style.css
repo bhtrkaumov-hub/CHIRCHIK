@@ -49,3 +49,8 @@ body {
 		.vneshnyaya {
   			color: #21e6a0;
 		}
+		@media (max-width: 500px) {
+  			h1 {
+   			font-size: 32px;
+  			}
+		}
