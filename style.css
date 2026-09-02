@@ -49,8 +49,23 @@ body {
 		.vneshnyaya {
   			color: #21e6a0;
 		}
+		.fakty {
+  			display: flex;
+			gap: 16px;
+		}
+		.fakt {
+ 			flex: 1;
+  			border: 1px solid #223344;
+  			border-radius: 12px;
+  			padding: 16px;
+  			text-align: center;
+		}
+
 		@media (max-width: 500px) {
   			h1 {
    			font-size: 32px;
+  			}
+			.fakty {
+    				flex-direction: column;
   			}
 		}
