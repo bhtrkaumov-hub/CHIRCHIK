@@ -11,3 +11,19 @@ knopka.addEventListener('click', function () {
               knopka.textContent = '☰';
       }
 });
+
+
+ var naverh = document.querySelector('.naverh');
+
+window.addEventListener('scroll', function () {
+      if (window.scrollY > 300) {
+              naverh.classList.add('vidna');
+      } else {
+              naverh.classList.remove('vidna');
+      }
+});
+
+
+naverh.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+});
