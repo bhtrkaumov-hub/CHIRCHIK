@@ -27,3 +27,20 @@ window.addEventListener('scroll', function () {
 naverh.addEventListener('click', function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+
+var knopkaTemy = document.querySelector('.tema');
+
+if (localStorage.getItem('tema') === 'svetlaya') {
+      document.body.classList.add('svetlaya');
+}
+
+knopkaTemy.addEventListener('click', function () {
+      document.body.classList.toggle('svetlaya');
+
+      if (document.body.classList.contains('svetlaya')) {
+              localStorage.setItem('tema', 'svetlaya');
+      } else {
+              localStorage.setItem('tema', 'tyomnaya');
+      }
+});
