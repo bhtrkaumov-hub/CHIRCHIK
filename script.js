@@ -61,7 +61,15 @@ var forma = document.querySelector('.forma');
 if (forma) {
       forma.addEventListener('submit', function (sobytie) {
               sobytie.preventDefault();
-              forma.innerHTML = '<p>Спасибо! Сообщение принято.</p>';
+	var imya = document.querySelector('#imya');
+        var soobshenie = document.querySelector('#soobshenie');
+             if (imya.value === '' || soobshenie.value === '') {
+                      alert('Заполните оба поля');
+                      return;
+              }
+
+        var imya = document.querySelector('#imya');
+              forma.innerHTML = '<p>Спасибо, ' + imya.value + '! Сообщение принято.</p>';
       });
 }
 
