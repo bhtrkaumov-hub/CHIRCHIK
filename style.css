@@ -176,6 +176,42 @@ nav a:hover {
  	color: var(--zelyonyy);
 	}
 
+/* ===== ФОРМА ===== */
+
+.forma {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      max-width: 420px;
+}
+
+.forma input,
+.forma textarea {
+      background: var(--fon);
+      color: var(--tekst);
+      border: 1px solid var(--ramka);
+      border-radius: 8px;
+      padding: 10px;
+      font-family: inherit;
+      font-size: 15px;
+}
+
+.forma button {
+      background: var(--akcent);
+      color: var(--fon);
+      border: none;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 15px;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: opacity 0.3s;
+}
+
+.forma button:hover {
+      opacity: 0.85;
+}
+
 /* ===== ТЕЛЕФОН ===== */
 
 @media (max-width: 500px) {
@@ -204,5 +240,3 @@ nav a:hover {
               display: block;
       }
 }
-
-

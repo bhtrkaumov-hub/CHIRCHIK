@@ -52,3 +52,16 @@ knopkaTemy.addEventListener('click', function () {
               localStorage.setItem('tema', 'tyomnaya');
       }
 });
+
+
+// ===== ФОРМА =====
+
+var forma = document.querySelector('.forma');
+
+if (forma) {
+      forma.addEventListener('submit', function (sobytie) {
+              sobytie.preventDefault();
+              forma.innerHTML = '<p>Спасибо! Сообщение принято.</p>';
+      });
+}
+
