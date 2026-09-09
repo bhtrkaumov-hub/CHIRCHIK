@@ -54,6 +54,7 @@ knopkaTemy.addEventListener('click', function () {
 });
 
 
+
 // ===== ФОРМА =====
 
 var forma = document.querySelector('.forma');
@@ -61,15 +62,21 @@ var forma = document.querySelector('.forma');
 if (forma) {
       forma.addEventListener('submit', function (sobytie) {
               sobytie.preventDefault();
-	var imya = document.querySelector('#imya');
-        var soobshenie = document.querySelector('#soobshenie');
-             if (imya.value === '' || soobshenie.value === '') {
+
+              var imya = document.querySelector('#imya');
+              var soobshenie = document.querySelector('#soobshenie');
+
+              if (imya.value === '' || soobshenie.value === '') {
                       alert('Заполните оба поля');
                       return;
               }
 
-        var imya = document.querySelector('#imya');
-              forma.innerHTML = '<p>Спасибо, ' + imya.value + '! Сообщение принято.</p>';
+              fetch(forma.action, {
+                      method: 'POST',
+                      body: new FormData(forma),
+                      headers: { 'Accept': 'application/json' }
+              }).then(function () {
+                      forma.innerHTML = '<p>Спасибо, ' + imya.value + '! Сообщение отправлено.</p>';
+              });
       });
 }
-
