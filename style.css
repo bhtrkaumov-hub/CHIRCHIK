@@ -1,9 +1,11 @@
+/* ===== ЦВЕТА И ТЕМЫ ===== */
 :root {
       --fon: #0f1720;
       --tekst: #e6edf3;
       --akcent: #4fc3f7;
       --tusklyy: #8b9bab;
       --ramka: #223344;
+      --zelyonyy: #21e6a0;
 }
 
 body.svetlaya {
@@ -12,7 +14,10 @@ body.svetlaya {
       --akcent: #0b74c4;
       --tusklyy: #6b7280;
       --ramka: #d5dde5;
+      --zelyonyy: #0a9d6b;
 }
+
+/* ===== ОБЩЕЕ ===== */
 
 body {
      	background: var(--fon);
@@ -54,9 +59,11 @@ figcaption {
   	margin-top: 8px;
 }
 
+/* ===== МЕНЮ ===== */
+
 nav {
 	display: flex;
-  	border-bottom: 1px solid var(--ramka)
+  	border-bottom: 1px solid var(--ramka);
   	padding-bottom: 16px;
   	margin-bottom: 30px;
 	justify-content: space-between;
@@ -71,8 +78,8 @@ nav a {
 }
 
 .vneshnyaya {
-  	color: #21e6a0;
-}
+ 	color: var(--zelyonyy);
+	}
 	
 .fakty {
   	display: flex;
@@ -81,7 +88,7 @@ nav a {
 		
 .fakt {
  	flex: 1;
-  	border: 1px solid var(--ramka)
+  	border: 1px solid var(--ramka);
   	border-radius: 12px;
   	padding: 16px;
   	text-align: center;
@@ -92,7 +99,10 @@ nav a {
       	font-weight: bold;
       	letter-spacing: 3px;
       	color: var(--tekst);
+	margin-right: auto;
 }
+
+/* ===== ГАЛЕРЕЯ ===== */
 
 .galereya {
 	display: grid;
@@ -107,6 +117,8 @@ nav a {
 	transition: transform 0.3s;
 
 }
+
+/* ===== КНОПКИ ===== */
 
 .burger {
       display: none;
@@ -124,8 +136,8 @@ nav a {
 }
 
 nav a:hover {
-      color: #21e6a0;
-}
+ 	color: var(--zelyonyy);
+	}
 
 
 .galereya figure:hover img {
@@ -161,8 +173,10 @@ nav a:hover {
 }
 
 .tema:hover {
-      color: #21e6a0;
-}
+ 	color: var(--zelyonyy);
+	}
+
+/* ===== ТЕЛЕФОН ===== */
 
 @media (max-width: 500px) {
   	h1 {

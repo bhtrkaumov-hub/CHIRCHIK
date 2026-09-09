@@ -1,3 +1,5 @@
+// ===== МЕНЮ-ГАМБУРГЕР =====
+
 var knopka = document.querySelector('.burger');
 var menyu = document.querySelector('.ssylki');
 
@@ -11,6 +13,9 @@ knopka.addEventListener('click', function () {
               knopka.textContent = '☰';
       }
 });
+
+
+// ===== КНОПКА НАВЕРХ =====
 
 
  var naverh = document.querySelector('.naverh');
@@ -28,6 +33,9 @@ naverh.addEventListener('click', function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+
+
+// ===== ПЕРЕКЛЮЧАТЕЛЬ ТЕМЫ =====
 
 var knopkaTemy = document.querySelector('.tema');
 
