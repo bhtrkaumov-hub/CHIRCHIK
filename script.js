@@ -60,6 +60,8 @@ knopkaTemy.addEventListener('click', function () {
 var forma = document.querySelector('.forma');
 
 if (forma) {
+      var otvet = document.querySelector('.otvet');
+
       forma.addEventListener('submit', function (sobytie) {
               sobytie.preventDefault();
 
@@ -67,18 +69,23 @@ if (forma) {
               var soobshenie = document.querySelector('#soobshenie');
 
               if (imya.value === '' || soobshenie.value === '') {
-                      alert('Заполните оба поля');
+                      otvet.textContent = 'Заполните оба поля';
+                      otvet.classList.add('oshibka');
                       return;
               }
+
+              otvet.textContent = 'Отправляю...';
+              otvet.classList.remove('oshibka');
 
               fetch(forma.action, {
                       method: 'POST',
                       body: new FormData(forma),
                       headers: { 'Accept': 'application/json' }
-      }).then(function () {
-              forma.innerHTML = '<p>Спасибо, ' + imya.value + '! Сообщение отправлено.</p>';
-      }).catch(function () {
-              alert('Не получилось отправить. Проверьте интернет.');
-      });
+              }).then(function () {
+                      forma.innerHTML = '<p>Спасибо, ' + imya.value + '! Сообщение отправлено.</p>';
+              }).catch(function () {
+                      otvet.textContent = 'Не получилось отправить. Проверьте интернет.';
+                      otvet.classList.add('oshibka');
+              });
       });
 }

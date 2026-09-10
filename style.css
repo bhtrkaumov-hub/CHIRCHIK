@@ -212,6 +212,16 @@ nav a:hover {
       opacity: 0.85;
 }
 
+.otvet {
+      font-size: 14px;
+      margin: 4px 0 0;
+      min-height: 20px;
+}
+
+.otvet.oshibka {
+      color: #e5534b;
+}
+
 /* ===== ТЕЛЕФОН ===== */
 
 @media (max-width: 500px) {
