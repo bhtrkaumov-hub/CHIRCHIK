@@ -75,8 +75,10 @@ if (forma) {
                       method: 'POST',
                       body: new FormData(forma),
                       headers: { 'Accept': 'application/json' }
-              }).then(function () {
-                      forma.innerHTML = '<p>Спасибо, ' + imya.value + '! Сообщение отправлено.</p>';
-              });
+      }).then(function () {
+              forma.innerHTML = '<p>Спасибо, ' + imya.value + '! Сообщение отправлено.</p>';
+      }).catch(function () {
+              alert('Не получилось отправить. Проверьте интернет.');
+      });
       });
 }
